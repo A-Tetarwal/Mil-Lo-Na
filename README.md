@@ -60,7 +60,6 @@ Mil Lo Na is a simple note-taking application that allows users to create and vi
 │   └── stylesheets/        # Public CSS files
 ├── views/
 │   └── index.ejs           # Main view template
-├── .gitignore
 ├── index.js                # Main server file
 ├── package.json
 ├── README.md
