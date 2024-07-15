@@ -9,7 +9,6 @@ Mil Lo Na is a simple note-taking application that allows users to create and vi
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -48,7 +47,7 @@ Mil Lo Na is a simple note-taking application that allows users to create and vi
    http://localhost:3000
 3. Use the form to create new notes. The notes will be listed below the form, and you can click "Read more" to view individual notes.
 
-## Folder Struture
+## Folder StruCture
 
    ```php
    mil-lo-na/
