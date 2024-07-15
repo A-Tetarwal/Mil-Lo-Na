@@ -38,7 +38,7 @@ Mil Lo Na is a simple note-taking application that allows users to create and vi
 
 5. (Optional) Add your own logo to the public/images directory and name it logo.svg.
 
-## Usages
+## Usage
 
 1. Start the server:
    ```bash
