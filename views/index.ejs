@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-zinc-900 flex flex-col items-center justify-center min-h-screen">
-    <img src="/images/logo.svg" alt="Logo" class="w-24 mb-4">
+    <img src="/images/logo.svg" alt="Logo" class="w-24 mt-4">
     <h3 class="text-center text-xl font-bold mb-4 text-white">Note here...</h3>
     <div id="input" class="form bg-zinc-800 p-6 rounded-lg shadow-white w-full max-w-md">
         <form action="/create" method="post">
@@ -18,13 +18,13 @@
             <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">Add</button>    
         </form>
     </div>
-    <div class="tasks w-72 m-4  flex flex-row justify-center items-center flex-wrap">
+    <div class="tasks w-auto m-4  flex flex-row justify-center items-center">
         <!-- index.ejs me humne data bheja hai files naam se -->
         <% if (files.length > 0) { %>
             <% files.forEach((element) => { %>
                 <div class="tasks m-2 text-white bg-zinc-800 px-3 py-4">
-                    <h1 class="text-white text-3xl tracking-tighter"><%= element %></h1> <!--ejs me "=" tb lgate hain jb kuch print krna hota hai, jaise yahan pe krna tha-->
-                    <a class="text-blue-500 inline-block" href="/files/<%= element %>">Read more</a>
+                    <h1 class="text-white text-xl tracking-tighter"><%= element %></h1> <!--ejs me "=" tb lgate hain jb kuch print krna hota hai, jaise yahan pe krna tha-->
+                    <a class="text-blue-500 inline-block" href="/file/<%= element %>">Read more</a>  <!--seedha folder ke liye href me file ki jagah files lik skte -->
                 </div>
             <% }); %>
         <% } else { %>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mil Lo Na</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 flex flex-col items-center justify-center min-h-screen">
+    <img src="/images/logo.svg" alt="Logo" class="w-24 mt-4">
+    <h3 class="text-center text-xl font-bold mb-4 text-white"><%= filename %></h3> <!--ye isliye kaam kr rahe hain filename vgera kyon ki humne show page ke render pe params pass kihe hain-->
+    <div class="text-white border p-4 rounded">
+        <% filedata.forEach((line) => { %>
+            <p><%= line %></p>
+        <% }); %>
+    </div>    
+    <h5 class="m-5"><a href="/" class="text-blue-500">&LeftArrow;Go Back to Home</a></h5>
+    <script src="/javascripts/index.js"></script>
+</body>
+</html>

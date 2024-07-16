@@ -20,6 +20,14 @@ app.get('/', (req,res) => {
     
 })
 
+// files ke liye dynamic route
+app.get('/file/:filename', (req, res) => {
+    fs.readFile(`./files/${req.params.filename}`, 'utf-8',  (err, filedata) => {
+        const filedataArray = filedata.split(','); // split hoke ek array me save ho jata hai 
+        res.render('show', {filename: req.params.filename, filedata: filedataArray}); // filedata params me nahin aayega, kyunki upr app.get me to sirf filename hi hai parameter mein
+    })
+})
+
 app.post('/create', (req, res) => {
     console.log(req.body);
     fs.writeFile(`./files/${req.body.Title.split('').join('')}.txt`, req.body.Description, (err) => {
