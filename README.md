@@ -1,6 +1,5 @@
 # Mil Lo Na
 
- - [ClickHere](index.js)
 Mil Lo Na is a simple note-taking application that allows users to create and view notes. The notes are stored as text files on the server.
 
 ## Table of Contents

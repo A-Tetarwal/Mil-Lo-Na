@@ -12,7 +12,7 @@
     <img src="/images/logo.svg" alt="Logo" class="w-24 mt-4">
     <h3 class="text-center text-xl font-bold mb-4 text-white">Note here...</h3>
     <div id="input" class="form bg-zinc-800 p-6 rounded-lg shadow-white w-full max-w-md">
-        <form action="/create" method="post">
+        <form action="  /create" method="post">
             <!-- input aur textarea ka data dekhne ke liye unko name dena hota hai -->
             <input type="text" placeholder="Title" name="Title" class="w-full bg-zinc-800 text-gray-400 mb-4 p-2 border border-zinc-600 rounded-lg focus:outline-none focus:border-zinc-400">
             <textarea id="" placeholder="Description" name="Description" class="w-full bg-zinc-800 text-gray-400 mb-4 p-2 border border-zinc-600 rounded-lg focus:outline-none focus:border-zinc-400 h-32 resize-none"></textarea>
@@ -20,12 +20,15 @@
         </form>
     </div>
     <div class="tasks w-auto m-4  flex flex-row justify-center items-center">
-        <!-- index.ejs me humne data bheja hai files naam se -->
+        <!-- index.js me humne data bheja hai files naam se -->
         <% if (files.length > 0) { %>
             <% files.forEach((element) => { %>
-                <div class="tasks m-2 text-white bg-zinc-800 px-3 py-4">
+                <div class="tasks m-2 text-white bg-zinc-800 px-3 py-4 w-48">
                     <h1 class="text-white text-xl tracking-tighter"><%= element %></h1> <!--ejs me "=" tb lgate hain jb kuch print krna hota hai, jaise yahan pe krna tha-->
-                    <a class="text-blue-500 inline-block" href="/file/<%= element %>">Read more</a>  <!--seedha folder ke liye href me file ki jagah files lik skte -->
+                    <div class="flex justify-between" id="options">
+                        <a class="text-blue-500 text-sm inline-block" href="/file/<%= element %>">Read more</a>  <!--seedha folder ke liye href me file ki jagah files likh skte -->
+                        <a class="text-zinc-600 text-sm inline-block" href="/edit/<%= element %>">Edit filename</a>    
+                    </div>
                 </div>
             <% }); %>
         <% } else { %>
