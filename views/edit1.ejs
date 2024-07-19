@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mil Lo Na | <%= filename%>
+    </title>
+    <link rel="icon" href="/images/logo.svg" />
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 flex flex-col items-center justify-center min-h-screen">
+    <img src="/images/logo.svg" alt="Logo" class="w-24 mt-4">
+    <h3 class="text-center text-xl font-bold mb-4 text-white">Edit here...(Don't forget to use .txt)</h3>
+    <div id="forms" class="flex flex-row">
+        <form action="/edit1" method="post" class="mr-5 flex flex-col justify-center items-center">
+            <input type="text" placeholder="<%= filename %>" name="name" value="<%= filename %>" class="w-72 bg-zinc-800 text-gray-400 mb-4 p-2 border border-zinc-600 rounded-lg focus:outline-none focus:border-zinc-400">
+            <textarea placeholder="<%= filedata.join('') %>" name="description" class="w-full bg-zinc-800 text-gray-400 mb-4 p-2 border border-zinc-600 rounded-lg focus:outline-none focus:border-zinc-400 h-32 resize-none"><%= filedata.join('') %></textarea>
+            <button class="w-72 bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600">Update</button>
+        </form>
+    </div>
+    <h5 class="m-5"><a href="/" class="text-blue-500">&LeftArrow;Go Back to Home</a></h5>
+
+    <script src="/javascripts/index.js"></script>
+</body>
+
+</html>

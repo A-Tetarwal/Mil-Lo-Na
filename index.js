@@ -73,6 +73,25 @@ app.post('/edit', (req, res) => {
     }
 });
 
+app.get('/edit1/:filename', (req, res) => {
+    fs.readFile(`./files/${req.params.filename}`, 'utf-8', (err, filedata) => {
+        const filedataArray = filedata.split(','); // split hoke ek array me save ho jata hai 
+        res.render('edit1', { filename: req.params.filename, filedata: filedataArray }); // filedata params me nahin aayega, kyunki iss wale app.get me to sirf filename hi hai parameter mein
+    })
+})
+
+app.post('/edit1', (req, res) => {
+    const {name, description} = req.body;
+    // const updateFileContent = (filename, content, res) => {
+    //     fs.writeFile(`./files/${filename}`, content, (err) => {
+    //         res.redirect('/');
+    //     });
+    // };
+    fs.writeFile(`./files/${name}`, description, (err) => {
+        res.redirect('/');
+    });
+})
+
 app.listen(3000, () => {
     console.log(`server running on 3000`);
 })
