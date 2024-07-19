@@ -1,6 +1,6 @@
 # Mil Lo Na
 
-Mil Lo Na is a simple note-taking application that allows users to create and view notes. The notes are stored as text files on the server.
+Mil Lo Na is a simple note-taking application that allows users to create, edit and view notes. The notes are stored as text files on the server.
 
 ## Table of Contents
 
@@ -16,6 +16,7 @@ Mil Lo Na is a simple note-taking application that allows users to create and vi
 - Create notes with a title and description.
 - View a list of created notes.
 - Read individual notes.
+- Edit or update notes
 
 ## Installation
 
